@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\work\텀ㅍ프로젝트\TermProject\TermProject.MapScreen\obj\Debug\
+D:\work\GitHub\TermProject\TermProject.MapScreen\obj\Debug\
 TermProject.MapScreen
 none
 false
@@ -13,7 +13,7 @@ DEBUG;TRACE
 214014999
 
 11591537969
-80-1687322602
+801543765794
 CustomMarkers\CustomMarkerRed.xaml;Views\MapScreenView.xaml;
 
 False
