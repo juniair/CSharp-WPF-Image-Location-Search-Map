@@ -4,16 +4,28 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 D:\work\GitHub\TermProject\TermProject\obj\Debug\
+=======
+C:\Users\mimoPC\Desktop\CSharp-WPF-Image-Location-Search-Map\TermProject\obj\Debug\
+>>>>>>> origin/master
 TermProject
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 D:\work\GitHub\TermProject\TermProject\App.xaml
 11892971807
 
 11-904956591
 85-2049431693
+=======
+C:\Users\mimoPC\Desktop\CSharp-WPF-Image-Location-Search-Map\TermProject\App.xaml
+11892971807
+
+111517237416
+851129350220
+>>>>>>> origin/master
 Views\MainWindow.xaml;
 
 False

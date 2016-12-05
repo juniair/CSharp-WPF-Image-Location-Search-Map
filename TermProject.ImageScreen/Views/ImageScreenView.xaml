@@ -14,8 +14,9 @@
             <RowDefinition Height="25*"/>
             <RowDefinition Height="143*"/>
         </Grid.RowDefinitions>
-        <Button Content="Next" Grid.Row="1" Grid.Column="1" Command="{Binding NextImageCommand}"/>
-        <Button Content="Prev" Grid.Row="1" Command="{Binding PreviousImageCommand}"/>
+        <Button Content="Refresh" Command="{Binding RefreshCommand}" BorderBrush="{x:Null}" BorderThickness="0" Grid.ColumnSpan="2"/>
+        <Button Content="Next" Grid.Row="1" Grid.Column="1" Command="{Binding NextImageCommand}" BorderThickness="0"/>
+        <Button Content="Prev" Grid.Row="1" Command="{Binding PreviousImageCommand}" BorderThickness="0"/>
         <Image Source="{Binding ImageFile}" Grid.Row="2" Grid.ColumnSpan="2"/>
     </Grid>
 </UserControl>

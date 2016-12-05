@@ -59,3 +59,6 @@ D:\work\텀ㅍ프로젝트\TermProject\TermProject\bin\Debug\Google.Apis.Platfor
 D:\work\텀ㅍ프로젝트\TermProject\TermProject\bin\Debug\Google.Apis.PlatformServices.xml
 D:\work\텀ㅍ프로젝트\TermProject\TermProject\bin\Debug\log4net.xml
 D:\work\텀ㅍ프로젝트\TermProject\TermProject\bin\Debug\Zlib.Portable.xml
+C:\Users\mimoPC\Desktop\CSharp-WPF-Image-Location-Search-Map\TermProject\bin\Debug\TermProject.exe.config
+C:\Users\mimoPC\Desktop\CSharp-WPF-Image-Location-Search-Map\TermProject\obj\Debug\TermProject.exe
+C:\Users\mimoPC\Desktop\CSharp-WPF-Image-Location-Search-Map\TermProject\obj\Debug\TermProject.pdb
