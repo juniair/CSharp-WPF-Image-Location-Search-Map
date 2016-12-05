@@ -47,7 +47,6 @@ namespace TermProject.ImageScreen.ViewModels
         public ICommand NextImageCommand { get; set; }
         public ICommand PreviousImageCommand { get; set; }
         public ICommand RefreshCommand { get; set; }
-        public ICommand Test { get; set; }
         #endregion
 
         public ImageScreenViewModel(IEventAggregator ea)
@@ -58,13 +57,10 @@ namespace TermProject.ImageScreen.ViewModels
             NextImageCommand = new DelegateCommand<object>(NextEvnet);
             PreviousImageCommand = new DelegateCommand<object>(PrevEvent);
             RefreshCommand = new DelegateCommand<object>(RefreshEvent);
-            Test = new DelegateCommand<object>(test);
+            ImageFile = this.Files.ElementAt(0).ThumbnailLink;
+            EA.GetEvent<CreateMakerEvent>().Publish(this.Files.ElementAt(0));
         }
 
-        private void test(Object obj)
-        {
-            MessageBox.Show("test'");
-        }
 
         #region Command Method
         private void RefreshEvent(Object obj)
@@ -76,7 +72,7 @@ namespace TermProject.ImageScreen.ViewModels
         {
             this.Count = (this.Count > 0) ? (this.Count - 1) : Files.Count-1;
 
-            ImageFile = Files.ElementAt(Count).ThumbnailLink;
+            ImageFile = this.Files.ElementAt(Count).ThumbnailLink;
             EA.GetEvent<CreateMakerEvent>().Publish(Files.ElementAt(Count));
         }
 
@@ -84,8 +80,7 @@ namespace TermProject.ImageScreen.ViewModels
         {
 
             this.Count = (this.Count < Files.Count-1) ? (this.Count + 1) : 0;
-
-            ImageFile = Files.ElementAt(Count).ThumbnailLink;
+            ImageFile = this.Files.ElementAt(Count).ThumbnailLink;
             EA.GetEvent<CreateMakerEvent>().Publish(Files.ElementAt(Count));
         }
         #endregion
@@ -93,14 +88,7 @@ namespace TermProject.ImageScreen.ViewModels
 
         private void init()
         {
-            if(this.Files == null)
-            {
-                this.Files = new List<Google.Apis.Drive.v3.Data.File>();
-            }
-            else
-            {
-                this.Files.Clear();
-            }
+            
 
             Credential = GetUserCredential();
             Service = GetDriverService();
@@ -108,17 +96,22 @@ namespace TermProject.ImageScreen.ViewModels
             ListRequest.Fields = "nextPageToken, files(imageMediaMetadata, thumbnailLink, id, name)";
             IList<Google.Apis.Drive.v3.Data.File> Files = ListRequest.Execute().Files;
 
+            if (this.Files == null)
+            {
+                this.Files = new List<Google.Apis.Drive.v3.Data.File>();
+            }
+
             if (Files != null && Files.Count > 0)
             {
                 foreach(var file in Files)
                 {
                     if(file.ImageMediaMetadata != null && file.ImageMediaMetadata.Location != null)
                     {
-                        this.Files.Add(file);
+                        if(!this.Files.Contains(file))
+                            this.Files.Add(file);
                     }
                 }
-                ImageFile = this.Files.ElementAt(0).ThumbnailLink;
-                EA.GetEvent<CreateMakerEvent>().Publish(this.Files.ElementAt(0));
+                
             }
         }
 
