@@ -4,13 +4,24 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="{Binding Title}" Height="720" Width="1024">
-    
+
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="310*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="310*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="512*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="181*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="181*"/>
+            <ColumnDefinition Width="50*"/>
             <ColumnDefinition Width="512*"/>
         </Grid.ColumnDefinitions>
-        <ContentControl prism:RegionManager.RegionName="ImageScreen" />
-        <ContentControl prism:RegionManager.RegionName="MapScreen" Grid.Column="1" />
+
+        <ContentControl prism:RegionManager.RegionName="ImageScreen" Grid.ColumnSpan="5" Grid.RowSpan="4" />
+        <ContentControl prism:RegionManager.RegionName="MapScreen" Grid.Column="5" Grid.RowSpan="4" />
     </Grid>
 </Window>

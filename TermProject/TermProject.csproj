@@ -187,7 +187,6 @@
       <Name>TermProject.Infra</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resources\ImageReady.ico" />
   </ItemGroup>

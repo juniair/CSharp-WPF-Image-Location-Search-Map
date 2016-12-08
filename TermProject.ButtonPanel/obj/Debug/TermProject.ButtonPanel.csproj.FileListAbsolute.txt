@@ -1,6 +1,0 @@
-D:\work\TermProject\TermProject.ButtonPanel\obj\Debug\TermProject.ButtonPanel.csprojResolveAssemblyReference.cache
-D:\work\TermProject\TermProject.ButtonPanel\obj\Debug\TermProject.ButtonPanel.Properties.Resources.resources
-D:\work\TermProject\TermProject.ButtonPanel\obj\Debug\TermProject.ButtonPanel.csproj.GenerateResource.Cache
-D:\work\GitHub\TermProject\TermProject.ButtonPanel\obj\Debug\TermProject.ButtonPanel.csprojResolveAssemblyReference.cache
-D:\work\GitHub\TermProject\TermProject.ButtonPanel\obj\Debug\TermProject.ButtonPanel.Properties.Resources.resources
-D:\work\GitHub\TermProject\TermProject.ButtonPanel\obj\Debug\TermProject.ButtonPanel.csproj.GenerateResource.Cache

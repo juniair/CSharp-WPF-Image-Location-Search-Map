@@ -4,7 +4,7 @@ namespace TermProject.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {
-        private string _title = "Prism Unity Application";
+        private string _title = "다찾아";
         public string Title
         {
             get { return _title; }

@@ -8,6 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imageready.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/arrow-left-bold-circle-outline.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/arrow-left-bold-circle.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/arrow-right-bold-circle-outline.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/arrow-right-bold-circle.png")]
 
 
