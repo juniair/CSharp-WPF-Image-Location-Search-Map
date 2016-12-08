@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TermProject.ImageScreen", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TermProject.MapScreen", "TermProject.MapScreen\TermProject.MapScreen.csproj", "{2A1C5240-A4F4-477A-A514-DC61F9D4124A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TermProject.ButtonPanel", "TermProject.ButtonPanel\TermProject.ButtonPanel.csproj", "{75C9CCEF-D000-4CA1-87B2-858EB87EA3B8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{2A1C5240-A4F4-477A-A514-DC61F9D4124A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A1C5240-A4F4-477A-A514-DC61F9D4124A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A1C5240-A4F4-477A-A514-DC61F9D4124A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{75C9CCEF-D000-4CA1-87B2-858EB87EA3B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{75C9CCEF-D000-4CA1-87B2-858EB87EA3B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{75C9CCEF-D000-4CA1-87B2-858EB87EA3B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{75C9CCEF-D000-4CA1-87B2-858EB87EA3B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
