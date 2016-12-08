@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="TermProject.LocationImage.Views.LocationImageView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <Image Source="{Binding ImageFile}"></Image>
+    </Grid>
+</UserControl>

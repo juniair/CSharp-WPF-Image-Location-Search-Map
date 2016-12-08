@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="TermProject.ImageScreen.Views.ImageScreenView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <Image Source="{Binding ImageUri}" Width="500" Height="1000"/>
+    </Grid>
+</UserControl>

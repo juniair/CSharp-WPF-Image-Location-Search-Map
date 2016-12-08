@@ -17,6 +17,7 @@ namespace TermProject.MapScreen.CustomMarkers
         Label Label;
         GMapMarker Marker;
         MapScreenView MapScreenView;
+        
 
         public CustomMarkerRed(MapScreenView view, GMapMarker marker, string title)
         {
@@ -24,29 +25,29 @@ namespace TermProject.MapScreen.CustomMarkers
 
             this.MapScreenView = view;
             this.Marker = marker;
-
+            
             Popup = new Popup();
             Label = new Label();
-
-            this.Unloaded += new RoutedEventHandler(CustomMarkerDemo_Unloaded);
-            this.Loaded += new RoutedEventHandler(CustomMarkerDemo_Loaded);
-            this.SizeChanged += new SizeChangedEventHandler(CustomMarkerDemo_SizeChanged);
+            
+            
+            this.Unloaded += new RoutedEventHandler(CustomMarkerRed_Unloaded);
+            this.Loaded += new RoutedEventHandler(CustomMarkerRed_Loaded);
+            this.MouseEnter += new MouseEventHandler(CustomMarkerRed_MouseEnter);
+            this.MouseLeave += new MouseEventHandler(CustomMarkerRed_MouseLeave);
+            this.SizeChanged += new SizeChangedEventHandler(CustomMarkerRed_SizeChanged);
             
 
             Popup.Placement = PlacementMode.Mouse;
             {
-                Label.Background = Brushes.Blue;
+                Label.Background = Brushes.Black;
                 Label.Foreground = Brushes.White;
-                Label.BorderBrush = Brushes.WhiteSmoke;
-                Label.BorderThickness = new Thickness(2);
-                Label.Padding = new Thickness(5);
-                Label.FontSize = 22;
+                Label.FontSize = 24;
                 Label.Content = title;
             }
             Popup.Child = Label;
         }
 
-        void CustomMarkerDemo_Loaded(object sender, RoutedEventArgs e)
+        void CustomMarkerRed_Loaded(object sender, RoutedEventArgs e)
         {
             if (icon.Source.CanFreeze)
             {
@@ -54,11 +55,11 @@ namespace TermProject.MapScreen.CustomMarkers
             }
         }
 
-        void CustomMarkerDemo_Unloaded(object sender, RoutedEventArgs e)
+        void CustomMarkerRed_Unloaded(object sender, RoutedEventArgs e)
         {
-            this.Unloaded -= new RoutedEventHandler(CustomMarkerDemo_Unloaded);
-            this.Loaded -= new RoutedEventHandler(CustomMarkerDemo_Loaded);
-            this.SizeChanged -= new SizeChangedEventHandler(CustomMarkerDemo_SizeChanged);
+            this.Unloaded -= new RoutedEventHandler(CustomMarkerRed_Unloaded);
+            this.Loaded -= new RoutedEventHandler(CustomMarkerRed_Loaded);
+            this.SizeChanged -= new SizeChangedEventHandler(CustomMarkerRed_SizeChanged);
 
             Marker.Shape = null;
             icon.Source = null;
@@ -67,9 +68,21 @@ namespace TermProject.MapScreen.CustomMarkers
             Label = null;
         }
 
-        void CustomMarkerDemo_SizeChanged(object sender, SizeChangedEventArgs e)
+        void CustomMarkerRed_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             Marker.Offset = new Point(-e.NewSize.Width / 2, -e.NewSize.Height);
+        }
+
+        void CustomMarkerRed_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Marker.ZIndex += 10000;
+            Popup.IsOpen = true;
+        }
+
+        void CustomMarkerRed_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Marker.ZIndex -= 10000;
+            Popup.IsOpen = false;
         }
 
     }

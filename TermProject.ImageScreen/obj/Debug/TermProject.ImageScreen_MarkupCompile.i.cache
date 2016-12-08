@@ -4,11 +4,7 @@
 library
 C#
 .cs
-<<<<<<< HEAD
 D:\work\GitHub\TermProject\TermProject.ImageScreen\obj\Debug\
-=======
-C:\Users\mimoPC\Desktop\CSharp-WPF-Image-Location-Search-Map\TermProject.ImageScreen\obj\Debug\
->>>>>>> origin/master
 TermProject.ImageScreen
 none
 false
@@ -16,13 +12,8 @@ DEBUG;TRACE
 
 11596508612
 
-<<<<<<< HEAD
 101141623505
 781751737236
-=======
-10-731149784
-78-324731332
->>>>>>> origin/master
 Views\ImageScreenView.xaml;
 
 False

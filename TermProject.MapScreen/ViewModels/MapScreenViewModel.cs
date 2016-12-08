@@ -12,6 +12,7 @@ using TermProject.Infra;
 using TermProject.MapScreen.Views;
 using Google.Apis.Drive.v3.Data;
 using TermProject.MapScreen.CustomMarkers;
+using GMap.NET.MapProviders;
 
 namespace TermProject.MapScreen.ViewModels
 {
@@ -52,22 +53,26 @@ namespace TermProject.MapScreen.ViewModels
         /// <param name="file">현재 화면에 출력된 이미지 파일</param>
         private void SearchMap(File file)
         {
-            
-            PointLatLng postion = new PointLatLng(file.ImageMediaMetadata.Location.Latitude.Value, file.ImageMediaMetadata.Location.Longitude.Value);
+            GeoCoderStatusCode status;
+            PointLatLng city = new PointLatLng(file.ImageMediaMetadata.Location.Latitude.Value, file.ImageMediaMetadata.Location.Longitude.Value);
 
-            if(it != null)
+            Placemark place = (Placemark) (GMapProviders.GoogleMap.GetPlacemark(city, out status));
+            if (it != null)
             {
                 MainMap.Markers.Remove(it);
             }
 
-            it = new GMapMarker(postion);
+            if(status == GeoCoderStatusCode.G_GEO_SUCCESS)
             {
-                it.ZIndex = 55;
-                it.Shape = new CustomMarkerRed(MapScreenView, it, file.Name);
+                it = new GMapMarker(city);
+                {
+                    it.ZIndex = 55;
+                    it.Shape = new CustomMarkerRed(MapScreenView, it, place.Address);
+                }
             }
 
             MainMap.Markers.Add(it);
-            MainMap.Position = postion;
+            MainMap.Position = city;
         }
 
         private void initUserControl(object view)
