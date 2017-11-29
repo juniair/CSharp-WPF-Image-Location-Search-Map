@@ -3,6 +3,7 @@ using Prism.Unity;
 using TermProject.Views;
 using System.Windows;
 using Prism.Modularity;
+using TermProject.Infra.Service;
 
 namespace TermProject
 {
@@ -21,6 +22,12 @@ namespace TermProject
         protected override IModuleCatalog CreateModuleCatalog()
         {
             return new DirectoryModuleCatalog() { ModulePath = @".\Modules" };
+        }
+
+        protected override void ConfigureContainer()
+        {
+            base.ConfigureContainer();
+            this.RegisterTypeIfMissing(typeof(IRepository), typeof(GoogleDriveRepository), true);
         }
     }
 }
