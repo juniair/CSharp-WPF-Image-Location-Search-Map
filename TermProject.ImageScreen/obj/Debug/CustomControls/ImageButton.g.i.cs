@@ -59,7 +59,7 @@ namespace PressedImageButton.Control {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TermProject.ImageScreen;component/customcontrols/imagebutton.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TermProject.Module.ImageScreen;component/customcontrols/imagebutton.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\CustomControls\ImageButton.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

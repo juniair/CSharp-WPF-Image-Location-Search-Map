@@ -59,7 +59,7 @@ namespace TermProject.MapScreen.CustomMarkers {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TermProject.MapScreen;component/custommarkers/custommarkerred.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TermProject.Module.MapScreen;component/custommarkers/custommarkerred.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\CustomMarkers\CustomMarkerRed.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

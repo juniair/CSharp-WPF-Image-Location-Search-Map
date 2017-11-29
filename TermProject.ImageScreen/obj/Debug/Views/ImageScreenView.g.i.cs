@@ -81,7 +81,7 @@ namespace TermProject.ImageScreen.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TermProject.ImageScreen;component/views/imagescreenview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TermProject.Module.ImageScreen;component/views/imagescreenview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Views\ImageScreenView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
