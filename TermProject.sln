@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.25807.0
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TermProject", "TermProject\TermProject.csproj", "{99C9E82C-C594-446D-AA59-8FFBC43AD226}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TermProject.Infra", "TermProject.Infra\TermProject.Infra.csproj", "{AB8B448C-DD74-4D60-A041-3E5D03A32180}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TermProject.ImageScreen", "TermProject.ImageScreen\TermProject.ImageScreen.csproj", "{356EE50E-3740-454F-98A7-27B7B4CEA0EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TermProject.Module.ImageScreen", "TermProject.ImageScreen\TermProject.Module.ImageScreen.csproj", "{356EE50E-3740-454F-98A7-27B7B4CEA0EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TermProject.MapScreen", "TermProject.MapScreen\TermProject.MapScreen.csproj", "{2A1C5240-A4F4-477A-A514-DC61F9D4124A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TermProject.Module.MapScreen", "TermProject.MapScreen\TermProject.Module.MapScreen.csproj", "{2A1C5240-A4F4-477A-A514-DC61F9D4124A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,5 +36,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3550FE5F-69A0-4627-9285-CA518CE14895}
 	EndGlobalSection
 EndGlobal

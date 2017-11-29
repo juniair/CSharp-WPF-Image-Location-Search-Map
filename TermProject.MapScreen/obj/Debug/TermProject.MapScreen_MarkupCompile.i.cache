@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\work\GitHub\TermProject\TermProject.MapScreen\obj\Debug\
+D:\000_Work\GitHub\CSharp-WPF-Image-Location-Search-Map\TermProject.MapScreen\obj\Debug\
 TermProject.MapScreen
 none
 false
@@ -12,8 +12,8 @@ DEBUG;TRACE
 
 214014999
 
-11591537969
-801543765794
+11-2044290046
+80639986786
 CustomMarkers\CustomMarkerRed.xaml;Views\MapScreenView.xaml;
 
 False
