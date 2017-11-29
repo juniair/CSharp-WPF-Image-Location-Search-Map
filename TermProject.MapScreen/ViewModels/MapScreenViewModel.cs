@@ -7,6 +7,7 @@ using TermProject.MapScreen.Views;
 using Google.Apis.Drive.v3.Data;
 using TermProject.MapScreen.CustomMarkers;
 using GMap.NET.MapProviders;
+using TermProject.Infra.Service;
 
 namespace TermProject.MapScreen.ViewModels
 {
@@ -14,14 +15,17 @@ namespace TermProject.MapScreen.ViewModels
     public class MapScreenViewModel : BindableBase
     {
 
+        private IRepository Repository { get; set; }
+
         private GMap.NET.WindowsPresentation.GMapControl MainMap;
         private MapScreenView MapScreenView;
         private GMapMarker it;
 
         public IEventAggregator EA { get; set; }
 
-        public MapScreenViewModel(IEventAggregator ea)
+        public MapScreenViewModel(IEventAggregator ea, IRepository repository)
         {
+            Repository = repository;
             EA = ea;
             EA.GetEvent<CreateMapEvent>().Subscribe(initMap);
             EA.GetEvent<CreateUserControlEvent>().Subscribe(initUserControl);

@@ -88,8 +88,6 @@ namespace TermProject.ImageScreen.ViewModels
 
         private void init()
         {
-            
-
             Credential = GetUserCredential();
             Service = GetDriverService();
             ListRequest = Service.Files.List();
@@ -121,7 +119,6 @@ namespace TermProject.ImageScreen.ViewModels
             {
                 string credPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
                 credPath = Path.Combine(credPath, ".credentials/termproject.json");
-
                 return GoogleWebAuthorizationBroker.AuthorizeAsync(
                     GoogleClientSecrets.Load(stream).Secrets,
                     Scopes,
