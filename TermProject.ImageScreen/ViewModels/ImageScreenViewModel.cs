@@ -128,6 +128,8 @@ namespace TermProject.ImageScreen.ViewModels
             }
         }
 
+        private void TestFoo() {}
+
         private DriveService GetDriverService()
         {
             return new DriveService(new BaseClientService.Initializer()
