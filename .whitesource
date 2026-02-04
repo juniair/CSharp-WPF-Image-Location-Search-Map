@@ -1,7 +1,7 @@
 {
   "scanSettings": {
     "configMode": "AUTO",
-    "projectToken": "2c9ba2b6a48e45fc8d8ac094f35117d27b40cba667f846598fbe1c9dfafcabc6",
+    "projectToken": "1d21a6d5b5864a34970303c49b4c450c6728f190f26a42719ad1c4ac5f150bdd",
     "baseBranches": ["master"],
     "enableSCA": true
   },
